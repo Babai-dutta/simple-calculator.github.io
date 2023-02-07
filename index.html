@@ -5,243 +5,336 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>firstweb</title>
+    <title>Online Food Delivery</title>
+    <!-- <link rel="stylesheet" media="screen and (max-width:1170px)" href="css/phone.css"> -->
     <style>
-        *{
-            box-sizing: border-box;
+        #navbar::before {
+            content: "";
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.4;
         }
-        .container {
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            display: flex;
+            position: absolute;
+            align-items: center;
+        }
+
+        #logo {
+            margin: 3px 5px;
+        }
+
+        img {
+            width: 150px;
+            margin: 11px 13px;
+            height: 62px;
+
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .item {
+            font-size: 1.3rem;
+        }
+
+        li a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            border-radius: 15px;
+            color: rgb(200, 300, 400);
+        }
+
+        li a:hover {
+            background-color: pink;
+            color: black;
+
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 717px;
+            padding: 3px 200px;
+        }
+
+        .home::before {
+            content: "";
+            background: url("vegetable-2.jpg") no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.9;
+
+        }
+
+        #pri {
+            font-size: 3rem;
+            padding: 12px;
+            color: rgb(500 600 700);
+            font-style: italic;
+        }
+
+        .sayu {
+            color: rgb(500 600 700);
+            font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .btn {
+            padding: 5px 10px;
+            margin: 15px;
+            color: brown;
+            background-color: aqua;
+            font-size: 1.2rem;
+            font-style: oblique;
+            border: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: pink;
+        }
+
+        .head {
+            text-align: center;
+            font-size: 2.5rem;
+            font-style: oblique;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        .box {
+            border: 2px solid red;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 23px;
+            background-color: bisque;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #services {
+            display: flex;
+            /* flex-direction: column; */
+            margin: 30px;
+        }
+
+        .box img {
+            height: 200px;
             margin: auto;
-            width: 542px;
+            display: block;
         }
 
-        .frsthead {
+        #services .box p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .heading {
             text-align: center;
-            font-size: 40px;
-            color: blue;
-            font-family:'Courier New', Courier, monospace;
+            font-size: 2.5rem;
+            font-style: oblique;
+            padding: 10px;
+            margin: 10px;
         }
 
-        .frstheader {
+        #ananya {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 34px;
+
+        }
+
+        .boxes img {
+            height: 150px;
+            width: 150px;
+        }
+
+        #client::before {
+            content: "";
+            height: 305px;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            background: url("need-help-g0ee53f20f_1920.png") no-repeat center center/cover;
+            opacity: 0.5;
+        }
+        #contact::before{
+            content: "";
+            position: absolute;
+            height: 556px;
+            width: 100%;
+            background: url("conatct.jpg") no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        #c-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .primary{
             text-align: center;
-            font-size: 20px;
-        }
-
-        .sayan {
-            border: 2px solid white;
-            padding: 6px;
-            padding-bottom: 21px;
-            border-radius: 14px;
-            background-color: whitesmoke;
-        }
-
-        #fifth {
-            float: right;
+            font-size: 2.5rem;
+            font-style: oblique;
             padding: 10px;
-            margin: 4px;
+            margin: 10px;
         }
-
-        #fourth {
-            float:left;
-            padding: 10px;
-            margin: 4px;
+        input{
+            padding: 5px;
+            margin: 11px;
         }
-
-        #sixth {
-            width: 500px;
-            padding: 15px;
-            margin:10px;
-        }
-        .fifinp{
-            width: 500px;
-            padding: 15px;
-            margin:10px;
-        }
-        .battery{
-            border: 1px solid ;
-            width: 100px;
-            padding: 10px;
-            margin: 20px;
+        .kuchu{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
         }
-        .sayu{
-            cursor: pointer;
+        #c-box form{
+            font-size: 1.5rem;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
-        .ananya{
-            font-size: 20px;
+        #c-box textarea,
+        #c-box input{
+            width: 100%;
+            border-radius: 15px;
+            padding: 10px;
         }
-        .dob{
-            padding: 5px;
-            width: 100px;
-            margin: 11px;
-            cursor: pointer;
-        }
-        .megha{
-            margin: 3px 137px;
-            width: 200px;
-            padding: 5px;
-            border-radius: 4px;
-            background-color: green;
-            color: white;
-            font-size: 20px;
-            cursor:pointer;
-        }
-        .megha:hover{
-            background-color: blue;
-        }
-        .end{
-            margin: 3px 137px;
-            width: 300px;
-            font-size: 20px;
-            color: blue;
-            cursor: pointer;
-        }
-    </style>
+        /* @media(max-width:1108px){
+            body{
+                background-color: red;
+            }
 
+        } */
+    </style>
+    
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="frsthead" id="first">FACEBOOK</h1>
-        <div class="sayan">
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.jpg">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Service</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact us</a></li>
+            <li class="item"><a href="#">Picture</a></li>
+        </ul>
+    </nav>
+    <section class="home">
+        <h1 id="pri">Welcome to Ananya's Kitchen</h1>
+        <p class="sayu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque pariatur quam,
+            accusantium iste
+            provident repellat tempora voluptates at temporibus enim, laboriosam assumenda! Incidunt fugit molestiae non
+            laudantium vero! Animi.</p>
+        <p class="sayu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque pariatur quam,
+            accusantium iste
+            provident repellat tempora voluptates at temporibus enim, laboriosam assumenda! Incidunt fugit molestiae non
+            laudantium vero! Animi.</p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section id="battery">
+        <h1 class="head">Our Services</h1>
+        <div id="services">
 
-            <header class="frstheader" id="second"><strong>Create a New Account</strong> </header>
-            <header class="frstheader" id="third">it's quick and easy</header>
-            <hr>
-            <div>
-                <span>
+            <div class="box">
+                <h2>Ice-Cream Delivery</h2>
+                <img src="ice-cream.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos minima dolorem accusantium id
+                    laudantium blanditiis nihil eaque! </p>
+            </div>
+            <div class="box">
+                <h2>Pizza Delivery</h2>
+                <img src="salmon-g50ba621fa_1920.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos minima dolorem accusantium id
+                    laudantium blanditiis nihil eaque! </p>
+            </div>
+            <div class="box">
+                <h2>Fruit Delivery</h2>
+                <img src="vegetables-g2b531c4c6_1280.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos minima dolorem accusantium id
+                    laudantium blanditiis nihil eaque! </p>
+            </div>
 
-                    <input type="text" class="thrinp" id="fourth" placeholder="first name">
-                    <input type="text" class="thrinp" id="fifth" placeholder="surname">
-                </span>
-
-
+        </div>
+    </section>
+    <section id="client">
+        <h1 class="heading">Our Clients</h1>
+        <div id="ananya">
+            <div class="boxes">
+                <img src="apple.jpg" alt="our client">
             </div>
-            <br>
-            <div>
-
-                <input type="text" class="fourinp" id="sixth" placeholder="Mobile Number or Email Address">
+            <div class="boxes">
+                <img src="google.png" alt="our client">
             </div>
-            <br>
-            <div>
-                <input type="number" class="fifinp" id="seventh" placeholder="New password">
+            <div class="boxes">
+                <img src="microsoft.png" alt="our client">
             </div>
-            <br>
-            <div class="ananya">
-                Gender :-
-            </div>
-            <br>
-            <div>
-                <span class="battery">
-                    <label>female</label>
-                    <input type="radio" class="sayu" name="sex">
-                </span>
-                <span class="battery">
-                    <label>male</label>
-                    <input type="radio" class="sayu" name="sex">
-                </span>
-                <span class="battery">
-                    <label>Other</label>
-                    <input type="radio" class="sayu" name="sex">
-                </span>
-            </div>
-            <br>
-            <div class="ananya">
-                Date Of Birth :-
-            </div>
-            <br>
-            <div>
-                <span >
-                    <select name="myday" class="dob">
-                        <option type="1">1</option>
-                        <option type="2">2</option>
-                        <option type="3">3</option>
-                        <option type="4">4</option>
-                        <option type="5">5</option>
-                        <option type="6">6</option>
-                        <option type="7">7</option>
-                        <option type="8">8</option>
-                        <option type="9">9</option>
-                        <option type="10">10</option>
-                        <option type="11">11</option>
-                        <option type="12">12</option>
-                        <option type="13">13</option>
-                        <option type="14">14</option>
-                        <option type="15">15</option>
-                        <option type="16">16</option>
-                        <option type="17">17</option>
-                        <option type="18">18</option>
-                        <option type="19">29</option>
-                        <option type="20">20</option>
-                        <option type="21">21</option>
-                        <option type="22">22</option>
-                        <option type="23">23</option>
-                        <option type="24">24</option>
-                        <option type="25">25</option>
-                        <option type="26">26</option>
-                        <option type="27">27</option>
-                        <option type="28">28</option>
-                        <option type="29">29</option>
-                        <option type="30">30</option>
-                        <option type="31">31</option>
-                    </select>
-                    <select name="mymonth" class="dob">
-                        <option type="1">january</option>
-                        <option type="2">february</option>
-                        <option type="3">march</option>
-                        <option type="4">april</option>
-                        <option type="5">may</option>
-                        <option type="6">june</option>
-                        <option type="7">july</option>
-                        <option type="8">august</option>
-                        <option type="9">september</option>
-                        <option type="10">october</option>
-                        <option type="11">november</option>
-                        <option type="12">december</option>
-                    </select>
-                    <select name="myyear" class="dob">
-                        <option type="1">2001</option>
-                        <option type="2">2002</option>
-                        <option type="3">2003</option>
-                        <option type="4">2004</option>
-                        <option type="5">2005</option>
-                        <option type="6">2006</option>
-                        <option type="7">2007</option>
-                        <option type="8">2008</option>
-                        <option type="9">2009</option>
-                        <option type="10">2010</option>
-                        <option type="11">2011</option>
-                        <option type="12">2012</option>
-                        <option type="13">2013</option>
-                        <option type="14">2014</option>
-                        <option type="15">2015</option>
-                        <option type="16">2016</option>
-                        <option type="17">2017</option>
-                        <option type="18">2018</option>
-                        <option type="19">2019</option>
-                        <option type="20">2020</option>
-                        <option type="21">2021</option>
-                        <option type="22">2022</option>
-                    </select>
-                </span>
-            </div>
-            <div>
-                <p>People who use our service may have uploaded your contact information to Facebook. Learn more.</p>
-            </div>
-            <div>
-                By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.
-            </div>
-            <br>
-            <div>
-                <button class="megha">Sign Up</button>
-            </div>
-            <br>
-            <div>
-                <p class="end">Already have an account?</p>
+            <div class="boxes">
+                <img src="yahoo.png" alt="our client">
             </div>
         </div>
-        
-    </div>
+    </section>
+    <section id="contact">
+        <h1 class="primary">Contact Us</h1>
+        <div id="c-box">
+
+            <form action="">
+                <div class="b">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="b">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Enter your E-mail">
+                </div>
+                <div class="b">
+                    <label for="p-num">Phone No:</label>
+                    <input type="number" id="Phone" placeholder="Enter your p-num">
+                </div>
+                <div class="b">
+                    <label for="name">Opinion:</label>
+                    <textarea name="messege" id="messege" cols="30" rows="10"></textarea>
+                </div>
+                
+
+            </form>
+        </div>
+
+    </section>
+    <footer>
+        <div class="kuchu">
+
+            copyright &copy; www.ananya's kitchen.com. All right reserved!
+        </div>
+    </footer>
 </body>
 
 </html>
